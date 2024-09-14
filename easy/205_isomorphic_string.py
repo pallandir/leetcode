@@ -1,4 +1,4 @@
-def first_occurence(s, t):
+def isomorphic_string2(s, t):
     if not s or not t:
         return False
 
@@ -8,12 +8,12 @@ def first_occurence(s, t):
     return [s.index(char) for char in s] == [t.index(char) for char in t]
 
 
-def first_occurence2(s, t):
+def isomorphic_string(s, t):
     return [*map(s.index, s)] == [*map(t.index, t)]
 
 
 if __name__ == "__main__":
-    print(first_occurence2("egg", "add"))
-    print(first_occurence2("foo", "bar"))
-    print(first_occurence2("paper", "title"))
-    print(first_occurence2("bbbaaaba", "aaabbbba"))
+    print(isomorphic_string("egg", "add"))
+    print(isomorphic_string("foo", "bar"))
+    print(isomorphic_string("paper", "title"))
+    print(isomorphic_string("bbbaaaba", "aaabbbba"))
