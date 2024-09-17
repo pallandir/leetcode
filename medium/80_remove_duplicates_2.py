@@ -1,7 +1,7 @@
 from collections import defaultdict
 
 
-def rotate_array(nums):
+def remove_duplicates_2(nums):
     if len(nums) < 3:
         return len(nums)
     freq = defaultdict(int)
@@ -15,5 +15,5 @@ def rotate_array(nums):
 
 if __name__ == "__main__":
     nums = [1, 1, 1, 2, 2, 3]
-    rotate_array(nums)
+    remove_duplicates_2(nums)
     print(nums)
