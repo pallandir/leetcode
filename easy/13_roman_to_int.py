@@ -10,7 +10,6 @@ def roman_to_int(s):
     }
     number = 0
     s_inverted = s[::-1]
-
     for index, char in enumerate(s_inverted):
         if map[char] < map[s_inverted[index - 1]] and index > 0:
             number -= map[char]
