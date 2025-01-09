@@ -38,7 +38,7 @@ class Node:
                 if current_node.right:
                     queue.append(current_node.right)
 
-        return tree_height - 1  # because there are node-1 edges in a tree
+        return tree_height - 1  # because there are (nodes - 1) edges in a tree
 
 
 if __name__ == "__main__":
