@@ -19,10 +19,13 @@ class Node:
                 # and the right most element will be pop last and will erase the previous value.
                 right_child = current_node.val
 
+                # If the goal is to print left visible tree then we can invert these push to the queue so the last item to be poped will be the 
+                # left most one
                 if current_node.left:
                     queue.append(current_node.left)
                 if current_node.right:
                     queue.append(current_node.right)
+
             result.append(right_child)
         return result
 
