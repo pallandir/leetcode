@@ -1,8 +1,9 @@
 from collections import defaultdict
 
 
-facts = ["1 m = 3 ft", "1 ft = 12 in", "1 h = 60 min", "1 min = 60 s"]
+facts = ["1 m = 3 ft", "1 ft = 12 in", "1 cm = 0.01 m ", "1 h = 60 min", "1 min = 60 s"]
 questions = [
+    "2 in in cm",
     "2 h to s",  # Valid: Convert 2 hours to seconds
     "3 min to in",  # Invalid: Convert minutes to inches
 ]
