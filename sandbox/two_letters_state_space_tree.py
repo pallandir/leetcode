@@ -28,6 +28,7 @@ def state_space_tree(chars_list):
         for char in chars_list:
             child = generate_tree(current_word + char, depth - 1)
             root.children.append(child)
+
         return root
 
     return generate_tree("", len(chars_list))

@@ -4,36 +4,38 @@ class Node:
         self.left = left
         self.right = right
 
-    def inorder_traversal(self):
-        stack = []
-        traversed = []
-        current_node = self
 
-        while current_node or stack:
-            while current_node:
-                stack.append(current_node)
-                current_node = current_node.left
-            current_node = stack.pop()
-            traversed.append(current_node.val)
-            current_node = current_node.right
+def inorder_traversal(root):
+    stack = []
+    traversed = []
+    current_node = root
 
-        return traversed
+    while current_node or stack:
+        while current_node:
+            stack.append(current_node)
+            current_node = current_node.left
+        current_node = stack.pop()
+        traversed.append(current_node.val)
+        current_node = current_node.right
 
-    def rec_inorder_traversal(self):
-        current = self
-        traversed = []
+    return traversed
 
-        def rec_h_traverse(node):
-            if not node:
-                return
 
-            rec_h_traverse(node.left)
-            traversed.append(node.val)
-            rec_h_traverse(node.right)
+def rec_inorder_traversal(root):
+    current = root
+    traversed = []
 
-        rec_h_traverse(current)
+    def rec_h_traverse(node):
+        if not node:
+            return
 
-        return traversed
+        rec_h_traverse(node.left)
+        traversed.append(node.val)
+        rec_h_traverse(node.right)
+
+    rec_h_traverse(current)
+
+    return traversed
 
 
 if __name__ == "__main__":
@@ -41,5 +43,5 @@ if __name__ == "__main__":
     tree.left = Node(3)
     tree.right = Node(2)
     tree.left.left = Node(6)
-    print(tree.inorder_traversal())
-    print(tree.rec_inorder_traversal())
+    print(inorder_traversal(tree))
+    print(rec_inorder_traversal(tree))
