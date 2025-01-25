@@ -5,6 +5,7 @@ class Node:
         self.right = right
 
 
+# root -> left -> right
 def preorder_traversal(root):
     traversed = []
     stack = [root]
