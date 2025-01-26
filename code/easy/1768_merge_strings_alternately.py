@@ -1,4 +1,4 @@
-def mergeAlternately(word1: str, word2: str):
+def merge_alternately(word1: str, word2: str):
     i = 0
     j = 0
     response = ""
@@ -21,4 +21,4 @@ if __name__ == "__main__":
     word1 = "abc"
     word2 = "pqr"
 
-    print(mergeAlternately(word1, word2))
+    print(merge_alternately(word1, word2))
