@@ -1,4 +1,4 @@
-def reverseVowels(s: str):
+def reverse_vowels(s: str):
     i = 0
     j = len(s) - 1
     s = list(s)
@@ -21,4 +21,4 @@ def reverseVowels(s: str):
 if __name__ == "__main__":
     s = "IceCreAm"
 
-    print(reverseVowels(s))
+    print(reverse_vowels(s))
