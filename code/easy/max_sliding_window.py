@@ -1,4 +1,4 @@
-def maxValues(nums: list, k: str):
+def max_values(nums: list, k: str):
     i, size = 0, len(nums)
     max_values = []
     while i <= size - k:
@@ -9,7 +9,4 @@ def maxValues(nums: list, k: str):
 
 
 if __name__ == "__main__":
-    nums = [1, 3, 2, 5, 8, 7]
-    k = 3
-
-    print(maxValues(nums, k))
+    print(max_values([1, 3, 2, 5, 8, 7], 3))
