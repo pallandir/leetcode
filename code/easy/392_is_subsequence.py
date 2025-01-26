@@ -1,4 +1,4 @@
-def isSubsequence(s: str, t: str) -> bool:
+def is_subsequence(s: str, t: str) -> bool:
     i, j = 0, 0
 
     while j < len(t) and i < len(s):
@@ -9,7 +9,7 @@ def isSubsequence(s: str, t: str) -> bool:
     return i == len(s)
 
 
-def isSubsequence2(s: str, t: str):
+def is_subsequence2(s: str, t: str):
     i, j = 0, 0
     while j < len(t) and i < len(s):
         if t[j] == s[i]:
@@ -22,4 +22,4 @@ if __name__ == "__main__":
     string = "ahbgdc"
     substr = "abc"
 
-    print(isSubsequence(substr, string))
+    print(is_subsequence(substr, string))
