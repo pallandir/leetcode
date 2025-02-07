@@ -32,10 +32,10 @@ Happy coding! 🚀
 ## Getting started
 
 - Problems are sorted by difficulty: **easy, medium, hard** (check the `code` folder).
-- More solved problems—beyond just LeetCode—can be found in the `global_practice` directory.
+- More solved problems _beyond just LeetCode_ can be found in the `global_practice` directory.
 - All my notes have been on paper so far, but I’ll be adding them to the `explanations` directory soon.
 
-Keeping up the grind whether it’s _a problem a day_ or _practice makes perfect_! Stay motivated (I need the reminder too). 🚀
+Keeping up the grind whether it’s _a problem a day keeps the doctor away_ or _practice makes perfect_! Stay motivated (I need the reminder too). 🚀
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
