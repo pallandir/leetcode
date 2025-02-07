@@ -31,8 +31,6 @@ Happy coding! 🚀
 
 ## Getting started
 
-## 💻 Code & Practice
-
 - Problems are sorted by difficulty: **easy, medium, hard** (check the `code` folder).
 - More solved problems—beyond just LeetCode—can be found in the `global_practice` directory.
 - All my notes have been on paper so far, but I’ll be adding them to the `explanations` directory soon.
