@@ -21,7 +21,7 @@
 
 Solving problems is a big part of being a developer/software engineer. Platforms like LeetCode (and others) offer challenges ranging from easy to hard, covering key algorithms and data structures.
 
-This repo is my personal collection of problems I've worked on, along with explanations on how I approached each one. You'll find multiple implementations—some naive, some optimized—as I explore different solutions.
+This repo is my personal collection of problems I've worked on, along with explanations on how I approached each one. You'll find multiple implementations some naive, some optimized as I explore different solutions.
 
 Happy coding! 🚀
 
@@ -55,7 +55,7 @@ Keeping up the grind whether it’s _a problem a day keeps the doctor away_ or _
 
 ## License
 
-This repository and all its content is under `GNU General Public License v3.0` license.
+This repository and all its content is under `GNU General Public License v3.0`.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
