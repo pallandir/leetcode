@@ -19,6 +19,7 @@ def inorder_successor(root, node):
 
 
 if __name__ == "__main__":
+    # in  a BST the node on the left is smaller than the root and the node on the right is bigger than the root
     tree = Node(20)
     tree.left = Node(10)
     tree.right = Node(30)
