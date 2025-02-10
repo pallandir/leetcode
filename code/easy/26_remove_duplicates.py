@@ -4,7 +4,6 @@ def remove_duplicates(nums):
 
 
 def remove_duplicates2(nums):
-    print(dict.fromkeys(nums))
     nums[:] = dict.fromkeys(nums).keys()
 
 

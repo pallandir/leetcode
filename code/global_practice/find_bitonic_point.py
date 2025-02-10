@@ -3,10 +3,8 @@ def find_bitonic_point(array):
 
     while left <= right:
         mid = (left + right) // 2
-
         if array[mid - 1] < array[mid] and array[mid] > array[mid + 1]:
             return mid
-
         elif array[mid] < array[mid + 1]:
             left = mid + 1
         else:
