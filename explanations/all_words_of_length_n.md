@@ -64,9 +64,9 @@ class Node:
     while queue:
       level = []
       for _ in range(len(queue)):
-        current_node = queue.pop(0) # Use dequeu for optimized pop().
+        current_node = queue.pop(0) #NOTE : Use dequeu for optimized pop().
         level.append(current_node.value)
-        queue.extend(current_node.children) # As children is a list we extend the queue instead of appending it.
+        queue.extend(current_node.children) # As children is a list we extend the queue instead of appending to it.
       result.append(level)
     print(result) # Or return result if you prefer
 ```
