@@ -47,7 +47,7 @@ Keeping up the grind whether it’s _a problem a day keeps the doctor away_ or _
 - [x] Solve medium problems
 - [x] Solve hard problems
 - [ ] Add more problems
-- [ ] Add all explainations for solved problems
+- [ ] Add all explanations for solved problems
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
