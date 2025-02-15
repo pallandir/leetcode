@@ -39,8 +39,8 @@ Here is an illustration of all words containing `letters = ['a','b']` and `k = 2
 ```mermaid
 flowchart TD
     A@{ label: "''" } --> B["a"] & C["b"]
-    B --> D["a"] & E["b"]
-    C --> F["a"] & G["b"]
+    B --> D["aa"] & E["ab"]
+    C --> F["ba"] & G["bb"]
 ```
 
 To build such a tree we need a Node class that will be initialized with 2 properties, a `value` and eventually a `children`.
