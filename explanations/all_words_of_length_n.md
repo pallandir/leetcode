@@ -6,7 +6,7 @@
     <img src="../assets/gear.svg" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">X. All two letters words of n length</h3>
+  <h3 align="center">X. All two letters words of length n</h3>
 
   <p align="center">
     Problem details and solution(s)
