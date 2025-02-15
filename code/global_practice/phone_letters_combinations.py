@@ -30,6 +30,5 @@ def combination_state_space(numbers):
 if __name__ == "__main__":
     numbers = "23"
     tree = combination_state_space(numbers)
-
     for value in tree:
         print(value)
