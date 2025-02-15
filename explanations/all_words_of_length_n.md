@@ -52,7 +52,7 @@ class Node:
     self.children = children if children else []
 ```
 
-Addtionnaly we can also write a `display` method that will print the generated tree in a nice format. This will use a DFS traversal for each level.
+Addtionnaly we can also write a `display` method that will print the generated tree in a nice format. This will use a BFS traversal for each level.
 
 ```py
 class Node:
