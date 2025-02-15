@@ -20,7 +20,7 @@ def permutations_state_space_tree(values):
 
 
 if __name__ == "__main__":
-    values = [1, 2, 3]
+    values = [1, 2]
     tree = permutations_state_space_tree(values)
     for value in tree:
         print(f"{value}")
