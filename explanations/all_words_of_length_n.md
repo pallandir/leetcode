@@ -6,7 +6,7 @@
     <img src="../assets/gear.svg" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">X. All two letters words of n length</h3>
+  <h3 align="center">X. All two letters words of length n</h3>
 
   <p align="center">
     Problem details and solution(s)
@@ -39,8 +39,8 @@ Here is an illustration of all words containing `letters = ['a','b']` and `k = 2
 ```mermaid
 flowchart TD
     A@{ label: "''" } --> B["a"] & C["b"]
-    B --> D["a"] & E["b"]
-    C --> F["a"] & G["b"]
+    B --> D["aa"] & E["ab"]
+    C --> F["ba"] & G["bb"]
 ```
 
 To build such a tree we need a Node class that will be initialized with 2 properties, a `value` and eventually a `children`.
@@ -52,7 +52,7 @@ class Node:
     self.children = children if children else []
 ```
 
-Addtionnaly we can also write a `display` method that will print the generated tree in a nice format. This will use a DFS traversal for each level.
+Addtionnaly we can also write a `display` method that will print the generated tree in a nice format. This will use a BFS traversal for each level.
 
 ```py
 class Node:
@@ -64,9 +64,9 @@ class Node:
     while queue:
       level = []
       for _ in range(len(queue)):
-        current_node = queue.pop(0) # Use dequeu for optimized pop().
+        current_node = queue.pop(0) #NOTE : Use dequeu for optimized pop().
         level.append(current_node.value)
-        queue.extend(current_node.children) # As children is a list we extend the queue instead of appending it.
+        queue.extend(current_node.children) # As children is a list we extend the queue instead of appending to it.
       result.append(level)
     print(result) # Or return result if you prefer
 ```
