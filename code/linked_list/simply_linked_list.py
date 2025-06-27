@@ -15,7 +15,14 @@ class LinkedList:
         self.head.next = current_node
 
     def invert(self):
-        pass
+        current_node = self.head.next
+        previous_node = None
+        while current_node:
+            next_node = current_node.next
+            current_node.next = previous_node
+            previous_node = current_node
+            current_node = next_node
+        self.head.next = previous_node
 
     def remove(self, value: int):
         pass
@@ -43,4 +50,6 @@ if __name__ == "__main__":
     ll.insert_first(10)
     ll.insert_first(453)
     ll.insert_first(2)
+    ll.display()
+    ll.invert()
     ll.display()
