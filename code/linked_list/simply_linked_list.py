@@ -1,4 +1,4 @@
-class Node:
+lass Node:
     def __init__(self, value):
         self.value = value
         self.next = None
@@ -17,7 +17,7 @@ class LinkedList:
 
     def invert(self):
         current_node = self.head.next
-        previous_node = None
+       previous_node = None
         while current_node:
             next_node = current_node.next
             current_node.next = previous_node
@@ -26,7 +26,9 @@ class LinkedList:
         self.head.next = previous_node
 
     def remove(self, value: int):
-        pass
+        current_node = self.head.next
+        while current_node
+            
 
     def pop_tail(self):
         pass
