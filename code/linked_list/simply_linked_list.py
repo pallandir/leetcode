@@ -32,7 +32,14 @@ class LinkedList:
         pass
 
     def find_value(self, value: int):
-        pass
+        current_node = self.head.next
+        node_count = 0
+        while current_node:
+            if current_node.value == value:
+                print(f"Value {current_node.value} found at node {node_count}")
+                break
+            node_count += 1
+            current_node = current_node.next
 
     def find_middle(self):
         left_ptr, right_ptr = self.head.next, self.head.next
@@ -59,7 +66,9 @@ if __name__ == "__main__":
     ll.insert_first(453)
     ll.insert_first(2)
     ll.display()
+    ll.find_value(453)
     ll.invert()
     ll.display()
     ll.get_count()
     ll.find_middle()
+    ll.find_value(453)
