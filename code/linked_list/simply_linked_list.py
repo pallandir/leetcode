@@ -45,7 +45,7 @@ class LinkedList:
         print("None")
 
     def get_count(self):
-        return self.length
+        print(f"Number of items: {self.length}")
 
 
 if __name__ == "__main__":
