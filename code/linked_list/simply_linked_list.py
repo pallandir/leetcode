@@ -1,3 +1,6 @@
+from collections import defaultdict
+
+
 class Node:
     def __init__(self, value):
         self.value = value
@@ -65,6 +68,14 @@ class LinkedList:
     def get_count(self):
         print(f"Number of items: {self.length}")
 
+    def most_frequent_value(self):
+        current_node = self.head.next
+        frequency_map = defaultdict(int)
+        while current_node:
+            frequency_map[current_node.value] += 1
+            current_node = current_node.next
+        print(f"Most frequent value: {max(frequency_map,key=frequency_map.get)}")
+
 
 if __name__ == "__main__":
     ll = LinkedList()
@@ -81,3 +92,7 @@ if __name__ == "__main__":
     ll.find_value(453)
     ll.remove(453)
     ll.display()
+    ll.insert_first(2)
+    ll.insert_first(134)
+    ll.insert_first(2)
+    ll.most_frequent_value()
