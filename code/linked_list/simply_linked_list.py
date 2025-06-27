@@ -1,4 +1,4 @@
-lass Node:
+class Node:
     def __init__(self, value):
         self.value = value
         self.next = None
@@ -17,7 +17,7 @@ class LinkedList:
 
     def invert(self):
         current_node = self.head.next
-       previous_node = None
+        previous_node = None
         while current_node:
             next_node = current_node.next
             current_node.next = previous_node
@@ -27,8 +27,13 @@ class LinkedList:
 
     def remove(self, value: int):
         current_node = self.head.next
-        while current_node
-            
+        previous_node = None
+        while current_node:
+            if current_node.value == value:
+                previous_node.next = current_node.next
+                self.length -= 1
+            previous_node = current_node
+            current_node = current_node.next
 
     def pop_tail(self):
         pass
@@ -74,3 +79,5 @@ if __name__ == "__main__":
     ll.get_count()
     ll.find_middle()
     ll.find_value(453)
+    ll.remove(453)
+    ll.display()
