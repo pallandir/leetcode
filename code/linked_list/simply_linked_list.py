@@ -35,7 +35,11 @@ class LinkedList:
         pass
 
     def find_middle(self):
-        pass
+        left_ptr, right_ptr = self.head.next, self.head.next
+        while right_ptr and right_ptr.next:
+            left_ptr = left_ptr.next
+            right_ptr = right_ptr.next.next
+        print(f"Middle value: {left_ptr.value}")
 
     def display(self):
         current_node = self.head.next
@@ -58,3 +62,4 @@ if __name__ == "__main__":
     ll.invert()
     ll.display()
     ll.get_count()
+    ll.find_middle()
