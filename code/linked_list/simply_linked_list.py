@@ -13,6 +13,7 @@ class LinkedList:
         current_node = Node(value)
         current_node.next = self.head.next
         self.head.next = current_node
+        self.length += 1
 
     def invert(self):
         current_node = self.head.next
@@ -43,6 +44,9 @@ class LinkedList:
             current_node = current_node.next
         print("None")
 
+    def get_count(self):
+        return self.length
+
 
 if __name__ == "__main__":
     ll = LinkedList()
@@ -53,3 +57,4 @@ if __name__ == "__main__":
     ll.display()
     ll.invert()
     ll.display()
+    ll.get_count()
