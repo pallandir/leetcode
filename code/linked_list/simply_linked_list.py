@@ -6,6 +6,12 @@ class Node:
         self.value = value
         self.next = None
 
+    def __str__(self):
+        return f"Node value: {self.value}, Neighbor: {self.next}"
+
+    def __repr__(self):
+        return f"Node(value='{self.value}', neightbor={self.next})"
+
 
 class LinkedList:
     def __init__(self) -> None:
@@ -52,11 +58,11 @@ class LinkedList:
             current_node = current_node.next
 
     def find_middle(self):
-        left_ptr, right_ptr = self.head.next, self.head.next
-        while right_ptr and right_ptr.next:
-            left_ptr = left_ptr.next
-            right_ptr = right_ptr.next.next
-        print(f"Middle value: {left_ptr.value}")
+        fast_ptr, slow_ptr = self.head.next, self.head.next
+        while slow_ptr and slow_ptr.next:
+            fast_ptr = fast_ptr.next
+            slow_ptr = slow_ptr.next.next
+        print(f"Middle value: {fast_ptr.value}")
 
     def display(self):
         current_node = self.head.next
@@ -76,6 +82,21 @@ class LinkedList:
             current_node = current_node.next
         print(f"Most frequent value: {max(frequency_map,key=frequency_map.get)}")
 
+    def rotate_list(self, iterations: int):
+        slow_ptr, fast_ptr = self.head.next, self.head.next
+        iterations %= self.length
+        count = 0
+        while count < iterations:
+            fast_ptr = fast_ptr.next
+            count += 1
+        while fast_ptr.next:
+            fast_ptr = fast_ptr.next
+            slow_ptr = slow_ptr.next
+        new_head = slow_ptr.next
+        slow_ptr.next = None
+        fast_ptr.next = self.head.next
+        self.head.next = new_head
+
 
 if __name__ == "__main__":
     ll = LinkedList()
@@ -92,7 +113,11 @@ if __name__ == "__main__":
     ll.find_value(453)
     ll.remove(453)
     ll.display()
+    ll.insert_first(3)
     ll.insert_first(2)
     ll.insert_first(134)
-    ll.insert_first(2)
     ll.most_frequent_value()
+    print("Before rotate")
+    ll.display()
+    ll.rotate_list(2)
+    ll.display()
