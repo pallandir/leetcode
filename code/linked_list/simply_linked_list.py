@@ -97,12 +97,30 @@ class LinkedList:
         fast_ptr.next = self.head.next
         self.head.next = new_head
 
+    def insert_at_position(self, value, position):
+        if self.length == 0:
+            print("Cannot insert at a given position in an empty list")
+            return
+        current_node = self.head.next
+        previous_node = self.head
+        position %= self.length
+        count = 0
+        while count < position and current_node:
+            previous_node = current_node
+            current_node = current_node.next
+            count += 1
+        new_node = Node(value)
+        previous_node.next = new_node
+        new_node.next = current_node
+        self.length += 1
+
 
 if __name__ == "__main__":
     ll = LinkedList()
     ll.insert_first(4)
     ll.insert_first(10)
     ll.insert_first(453)
+    ll.display()
     ll.insert_first(2)
     ll.display()
     ll.find_value(453)
@@ -120,4 +138,7 @@ if __name__ == "__main__":
     print("Before rotate")
     ll.display()
     ll.rotate_list(2)
+    ll.display()
+    print("Inserting 3000 at position 1")
+    ll.insert_at_position(3000, 1)
     ll.display()
