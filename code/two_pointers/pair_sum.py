@@ -2,7 +2,6 @@ def pair_sum(num_list, target):
     left, right = 0, len(num_list) - 1
     all_sums = []
     while left <= right:
-        print(left, right)
         sum = num_list[left] + num_list[right]
         if sum < target:
             left += 1
